@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750D95752770C2F1000D1765 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D95742770C2F1000D1765 /* LibraryAPI.swift */; };
+		750D95772770C39B000D1765 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D95762770C39B000D1765 /* PersistencyManager.swift */; };
 		75F8703F2770BE4B00C2A414 /* HTTPClient1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8703E2770BE4B00C2A414 /* HTTPClient1.swift */; };
 		79F6FC411F14251800E22ED5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6FC401F14251800E22ED5 /* Album.swift */; };
 		79F6FC431F14254E00E22ED5 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6FC421F14254E00E22ED5 /* AlbumView.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		750D95742770C2F1000D1765 /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
+		750D95762770C39B000D1765 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		75F8703E2770BE4B00C2A414 /* HTTPClient1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient1.swift; sourceTree = "<group>"; };
 		79F6FC401F14251800E22ED5 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		79F6FC421F14254E00E22ED5 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				75F8703E2770BE4B00C2A414 /* HTTPClient1.swift */,
+				750D95742770C2F1000D1765 /* LibraryAPI.swift */,
+				750D95762770C39B000D1765 /* PersistencyManager.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -182,9 +188,11 @@
 			files = (
 				EDDF66181EBD28EF006123DA /* ViewController.swift in Sources */,
 				EDDF66161EBD28EF006123DA /* AppDelegate.swift in Sources */,
+				750D95752770C2F1000D1765 /* LibraryAPI.swift in Sources */,
 				79F6FC431F14254E00E22ED5 /* AlbumView.swift in Sources */,
 				75F8703F2770BE4B00C2A414 /* HTTPClient1.swift in Sources */,
 				79F6FC411F14251800E22ED5 /* Album.swift in Sources */,
+				750D95772770C39B000D1765 /* PersistencyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
