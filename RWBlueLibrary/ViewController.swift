@@ -10,6 +10,11 @@ import UIKit
 
 final class ViewController: UIViewController {
   
+  private enum Constants {
+    static let CellIdentifier = "Cell"
+    static let IndexRestorationKey = "currentAlbumIndex"
+  }
+  
   private var currentAlbumIndex = 0
   private var currentAlbumData: [AlbumData]?
   private var allAlbums = [Album]()
@@ -31,6 +36,11 @@ final class ViewController: UIViewController {
     horizontalScrollerView.reload()
 
     showDataForAlbum(at: currentAlbumIndex)
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    horizontalScrollerView.scrollToView(at: currentAlbumIndex, animated: false)
   }
   
   private func showDataForAlbum(at index: Int) {
@@ -60,7 +70,7 @@ extension ViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifier, for: indexPath)
     if let albumData = currentAlbumData {
       let row = indexPath.row
       cell.textLabel?.text = albumData[row].title
@@ -107,4 +117,20 @@ extension ViewController: HorizontalScrollerViewDataSource {
     return albumView
   }
   
+}
+
+//MARK: востановление состояния
+extension ViewController {
+
+  override func encodeRestorableState(with coder: NSCoder) {
+    coder.encode(currentAlbumIndex, forKey: Constants.IndexRestorationKey)
+    super.encodeRestorableState(with: coder)
+  }
+  
+  override func decodeRestorableState(with coder: NSCoder) {
+    super.decodeRestorableState(with: coder)
+    currentAlbumIndex = coder.decodeInteger(forKey: Constants.IndexRestorationKey)
+    showDataForAlbum(at: currentAlbumIndex)
+    horizontalScrollerView.reload()
+  }
 }
