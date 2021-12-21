@@ -10,6 +10,7 @@
 		750D95772770C39B000D1765 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D95762770C39B000D1765 /* PersistencyManager.swift */; };
 		750D95792770C96F000D1765 /* LIbaryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D95782770C96F000D1765 /* LIbaryAPI.swift */; };
 		75BA0BFE27720F85006CD8E0 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BA0BFD27720F85006CD8E0 /* HorizontalScrollerView.swift */; };
+		75BA0C01277231BF006CD8E0 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BA0C00277231BF006CD8E0 /* NotificationExtension.swift */; };
 		75F8703F2770BE4B00C2A414 /* HTTPClient1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8703E2770BE4B00C2A414 /* HTTPClient1.swift */; };
 		79F6FC411F14251800E22ED5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6FC401F14251800E22ED5 /* Album.swift */; };
 		79F6FC431F14254E00E22ED5 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6FC421F14254E00E22ED5 /* AlbumView.swift */; };
@@ -24,6 +25,7 @@
 		750D95762770C39B000D1765 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		750D95782770C96F000D1765 /* LIbaryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIbaryAPI.swift; sourceTree = "<group>"; };
 		75BA0BFD27720F85006CD8E0 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
+		75BA0C00277231BF006CD8E0 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		75F8703E2770BE4B00C2A414 /* HTTPClient1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient1.swift; sourceTree = "<group>"; };
 		79F6FC401F14251800E22ED5 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		79F6FC421F14254E00E22ED5 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		75BA0BFF27722DCD006CD8E0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				75BA0C00277231BF006CD8E0 /* NotificationExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		EDDF66091EBD28EF006123DA = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				EDDF66151EBD28EF006123DA /* AppDelegate.swift */,
+				75BA0BFF27722DCD006CD8E0 /* Extension */,
 				EDDF66351EBD2B5F006123DA /* API */,
 				750D95722770C041000D1765 /* Model */,
 				750D95732770C047000D1765 /* View */,
@@ -192,6 +203,7 @@
 				EDDF66181EBD28EF006123DA /* ViewController.swift in Sources */,
 				750D95792770C96F000D1765 /* LIbaryAPI.swift in Sources */,
 				75BA0BFE27720F85006CD8E0 /* HorizontalScrollerView.swift in Sources */,
+				75BA0C01277231BF006CD8E0 /* NotificationExtension.swift in Sources */,
 				EDDF66161EBD28EF006123DA /* AppDelegate.swift in Sources */,
 				79F6FC431F14254E00E22ED5 /* AlbumView.swift in Sources */,
 				75F8703F2770BE4B00C2A414 /* HTTPClient1.swift in Sources */,
