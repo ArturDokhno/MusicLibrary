@@ -17,6 +17,7 @@ final class ViewController: UIViewController {
   @IBOutlet var tableView: UITableView!
   @IBOutlet var undoBarButtonItem: UIBarButtonItem!
   @IBOutlet var trashBarButtonItem: UIBarButtonItem!
+  @IBOutlet var horizontalScrollerView: HorizontalScrollerView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,6 +26,10 @@ final class ViewController: UIViewController {
     
     tableView.dataSource = self
     
+    horizontalScrollerView.dataSource = self
+    horizontalScrollerView.delegate = self
+    horizontalScrollerView.reload()
+
     showDataForAlbum(at: currentAlbumIndex)
   }
   
@@ -62,6 +67,44 @@ extension ViewController: UITableViewDataSource {
       cell.detailTextLabel?.text = albumData[row].value
     }
     return cell
+  }
+  
+}
+
+extension ViewController: HorizontalScrollerViewDelegate {
+  
+  func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, didSelectViewAt index: Int) {
+    // беру ранее выбранный альбом и отменяю выбор обложки альбома
+    let previousAlbumView = horizontalScrollerView.view(at: currentAlbumIndex) as! AlbumView
+    previousAlbumView.highlightAlbum(false)
+    // сохраняю текущий индекс обложки альбома который только что нажали
+    currentAlbumIndex = index
+    // беру выделенную в данный момент обложку альбома и выделяю выделенную область
+    let albumView = horizontalScrollerView.view(at: currentAlbumIndex) as! AlbumView
+    albumView.highlightAlbum(true)
+    // отображаю данные для нового альбома в табличном представлении
+    showDataForAlbum(at: index)
+  }
+  
+}
+
+extension ViewController: HorizontalScrollerViewDataSource {
+  
+  func numberOfViews(in horizontalScrollerView: HorizontalScrollerView) -> Int {
+    return allAlbums.count
+  }
+  
+  func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, viewAt index: Int) -> UIView {
+    let album = allAlbums[index]
+    let albumView = AlbumView(
+      frame: CGRect(x: 0, y: 0, width: 100, height: 100),
+      coverUrl: album.coverUrl)
+    if currentAlbumIndex == index {
+      albumView.highlightAlbum(true)
+    } else {
+      albumView.highlightAlbum(false)
+    }
+    return albumView
   }
   
 }

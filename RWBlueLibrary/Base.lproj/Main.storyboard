@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dnv-ev-8Dl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dnv-ev-8Dl" customClass="HorizontalScrollerView" customModule="RWBlueLibrary" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="88" width="414" height="120"/>
                                 <color key="backgroundColor" red="0.78837685899999999" green="0.78972791379999996" blue="0.81034482760000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -83,6 +83,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pop Music" id="mls-w5-egf"/>
                     <connections>
+                        <outlet property="horizontalScrollerView" destination="Dnv-ev-8Dl" id="evH-nZ-2qh"/>
                         <outlet property="tableView" destination="AnY-ot-Xl2" id="TNs-oB-Cm6"/>
                         <outlet property="trashBarButtonItem" destination="SFM-mY-swp" id="jeB-gb-pyF"/>
                         <outlet property="undoBarButtonItem" destination="bdf-VO-SD2" id="0gC-fC-xVm"/>
