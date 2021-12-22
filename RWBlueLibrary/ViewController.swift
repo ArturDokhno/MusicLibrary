@@ -134,3 +134,7 @@ extension ViewController {
     horizontalScrollerView.reload()
   }
 }
+
+// Пройтись еще раз по всему коду переписав все заново с комитами к каждой строчке
+// https://www.raywenderlich.com/477-design-patterns-on-ios-using-swift-part-1-2
+// https://www.raywenderlich.com/476-design-patterns-on-ios-using-swift-part-2-2
